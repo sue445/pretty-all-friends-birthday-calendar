@@ -6,10 +6,22 @@ require "active_support/all"
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
-  attr_reader :config
+  attr_reader :config, :name
 
   def initialize(name)
     @config = YAML.load_file("#{CONFIG_PATH}/#{name}.yml")
+    @name = name
+  end
+
+  # @param dist_dir [String]
+  def generate_ical_file(dist_dir)
+    from_year = Date.today.year
+    date_characters = birthdays(from_year: from_year, to_year: from_year + 2)
+    ical = birthday_ical(date_characters)
+
+    File.open("#{dist_dir}/#{name}.ics", "wb") do |f|
+      f.write(ical)
+    end
   end
 
   # Get birthdays within `from_year` and `to_year`

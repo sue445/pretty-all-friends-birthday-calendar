@@ -1,6 +1,20 @@
 RSpec.describe BirthdayCalendar do
   let(:calendar) { BirthdayCalendar.new("prichan") }
 
+  describe "#generate_ical_file" do
+    include_context "uses temp dir"
+
+    subject do
+      calendar.generate_ical_file(temp_dir)
+
+      temp_dir_path.join("prichan.ics")
+    end
+
+    let(:ical_file) { temp_dir_path.join("prichan.ics") }
+
+    it { should be_exist }
+  end
+
   describe "#birthdays" do
     subject { calendar.birthdays(from_year: from_year, to_year: to_year) }
 

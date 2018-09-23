@@ -27,6 +27,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rspec-temp_dir (1.0.0)
+      rspec (>= 3.0)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -38,6 +40,7 @@ DEPENDENCIES
   activesupport
   icalendar
   rspec
+  rspec-temp_dir
 
 BUNDLED WITH
    1.16.4
