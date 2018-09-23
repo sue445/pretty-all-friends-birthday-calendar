@@ -23,6 +23,13 @@ class BirthdayCalendar
   end
 
   # @param dist_dir [String]
+  # @param name [String]
+  def self.generate_ical_file(dist_dir, name)
+    calendar = BirthdayCalendar.new(name)
+    calendar.generate_ical_file(dist_dir)
+  end
+
+  # @param dist_dir [String]
   def generate_ical_file(dist_dir)
     from_year = Date.today.year
     date_characters = birthdays(from_year: from_year, to_year: from_year + 2)
