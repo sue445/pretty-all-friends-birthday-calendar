@@ -14,4 +14,5 @@ https://sue445.github.io/pretty-all-friends-birthday-calendar/
 ## 誕生日の編集方法
 既存のデータを参考に [config/](config/) のymlファイルにキャラ名と誕生日を追加・編集してください。
 
+
 [docs/](docs/) の `ics` ファイルはCIでcommitされるので基本的に手動変更不要です。
