@@ -62,13 +62,10 @@ workflows:
   update_new_year:
     triggers:
       - schedule:
-        cron: "0 0 1 1 *"
-        filters:
-          branches:
-            only: master
-
-    jobs:
-      - update_ical:
+          cron: "0 0 1 1 *"
           filters:
             branches:
               only: master
+
+    jobs:
+      - update_ical
