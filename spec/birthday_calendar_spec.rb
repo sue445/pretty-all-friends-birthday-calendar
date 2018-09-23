@@ -2,7 +2,7 @@ RSpec.describe BirthdayCalendar do
   let(:calendar) { BirthdayCalendar.new("prichan") }
 
   describe "#birthdays" do
-    subject { calendar.birthdays(from_year, to_year) }
+    subject { calendar.birthdays(from_year: from_year, to_year: to_year) }
 
     let(:from_year) { 2018 }
     let(:to_year)   { 2020 }
