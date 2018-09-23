@@ -11,4 +11,21 @@ RSpec.describe BirthdayCalendar do
     it { should include(Date.new(2018, 9, 9) => "萌黄えも") }
     it { should include(Date.new(2020, 7, 12) => "桃山みらい") }
   end
+
+  describe "#birthday_ical" do
+    subject { calendar.birthday_ical(date_characters) }
+
+    let(:date_characters) do
+      {
+        Date.new(2018, 7, 12) => "桃山みらい",
+        Date.new(2018, 9, 9)  => "萌黄えも",
+      }
+    end
+
+    it { should include "X-WR-CALNAME;VALUE=TEXT:キラッとプリ☆チャンの誕生日" }
+    it { should include "DTSTART;VALUE=DATE:20180712" }
+    it { should include "SUMMARY:桃山みらいの誕生日" }
+    it { should include "DTSTART;VALUE=DATE:20180909" }
+    it { should include "SUMMARY:萌黄えもの誕生日" }
+  end
 end
