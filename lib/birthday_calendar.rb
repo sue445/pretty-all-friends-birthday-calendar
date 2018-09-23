@@ -14,6 +14,15 @@ class BirthdayCalendar
   end
 
   # @param dist_dir [String]
+  def self.generate_all_ical_files(dist_dir)
+    config_names = Dir["#{CONFIG_PATH}/*.yml"].map { |path| File.basename(path, ".yml") }
+    config_names.sort.each do |name|
+      calendar = BirthdayCalendar.new(name)
+      calendar.generate_ical_file(dist_dir)
+    end
+  end
+
+  # @param dist_dir [String]
   def generate_ical_file(dist_dir)
     from_year = Date.today.year
     date_characters = birthdays(from_year: from_year, to_year: from_year + 2)
