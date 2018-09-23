@@ -27,6 +27,11 @@ jobs:
       - save_cache:
           <<: *save_bundle_cache_option
       - run: bundle exec rspec
+      - run:
+          name: generate_ical (dry run)
+          command: |
+            bundle exec rake generate_ical
+            git --no-pager diff
 
   update_ical:
     <<: *default
