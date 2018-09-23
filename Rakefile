@@ -3,6 +3,12 @@ task :environment do
 end
 
 desc "Generate ical files"
-task :generate_ical => :environment do
-  BirthdayCalendar.generate_all_ical_files("#{__dir__}/docs")
+task :generate_ical, [:config_name] => :environment do |_task, args|
+  config_name = args[:config_name]
+
+  if config_name
+    BirthdayCalendar.generate_ical_file("#{__dir__}/docs", config_name)
+  else
+    BirthdayCalendar.generate_all_ical_files("#{__dir__}/docs")
+  end
 end
