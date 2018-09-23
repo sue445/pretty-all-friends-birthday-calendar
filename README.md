@@ -3,6 +3,8 @@
 
 https://sue445.github.io/pretty-all-friends-birthday-calendar/
 
+[![CircleCI](https://circleci.com/gh/sue445/pretty-all-friends-birthday-calendar/tree/master.svg?style=svg)](https://circleci.com/gh/sue445/pretty-all-friends-birthday-calendar/tree/master)
+
 ## ical一覧
 * プリティーリズム : https://sue445.github.io/pretty-all-friends-birthday-calendar/pretty_rhythm.ics
 * KING OF PRISM : https://sue445.github.io/pretty-all-friends-birthday-calendar/king_of_prism.ics
