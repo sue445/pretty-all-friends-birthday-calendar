@@ -57,5 +57,4 @@ workflows:
             - build
           filters:
             branches:
-              # TODO: WIP
-              only: feature/update_from_ci
+              only: master
