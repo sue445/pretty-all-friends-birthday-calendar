@@ -68,4 +68,7 @@ workflows:
             only: master
 
     jobs:
-      - update_ical
+      - update_ical:
+          filters:
+            branches:
+              only: master
