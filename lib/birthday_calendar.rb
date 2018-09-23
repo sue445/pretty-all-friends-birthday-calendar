@@ -51,6 +51,9 @@ class BirthdayCalendar
       (from_year..to_year).each do |year|
         date = Date.parse("#{year}/#{character["birthday"]}")
         date_characters[date] = character["name"]
+      rescue ArgumentError => e
+        # NOTE: うるう年以外で2/29をparseしようとするとエラーになるので握りつぶす
+        raise unless e.message == "invalid date"
       end
     end
 
