@@ -1,20 +1,33 @@
 title: "キラッとプリ☆チャン"
 characters:
-  - name:     "桃山みらい"
-    birthday: "7/12"
-  - name:     "萌黄えも"
-    birthday: "9/9"
-  - name:     "青葉りんか"
-    birthday: "1/25"
-  - name:     "赤城あんな"
-    birthday: "7/6"
-  - name:     "緑川さら"
-    birthday: "6/9"
-  - name:     "マリー"
-    birthday: "7/4"
-  - name:     "ミズリー"
-    birthday: "12/12"
-  - name:     "クオ"
-    birthday: "9/23"
-  - name:     "バディス"
-    birthday: "3/23"
+  - name:        "桃山みらい"
+    birthday:    "7/12"
+    description: "デコレーションケーキの日"
+
+  - name:        "萌黄えも"
+    birthday:    "9/9"
+    description: "ポップコーンの日"
+
+  - name:        "青葉りんか"
+    birthday:    "1/25"
+    description: "美容記念日"
+
+  - name:        "赤城あんな"
+    birthday:    "7/6"
+    description: "ピアノの日"
+
+  - name:        "緑川さら"
+    birthday:    "6/9"
+    description: "ロックの日"
+
+  - name:        "マリー"
+    birthday:    "7/4"
+
+  - name:        "ミズリー"
+    birthday:    "12/12"
+
+  - name:        "クオ"
+    birthday:    "9/23"
+
+  - name:        "バディス"
+    birthday:    "3/23"

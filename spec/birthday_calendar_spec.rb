@@ -35,9 +35,9 @@ RSpec.describe BirthdayCalendar do
     let(:from_year) { 2018 }
     let(:to_year)   { 2020 }
 
-    it { should include(Date.new(2018, 7, 12) => "桃山みらい") }
-    it { should include(Date.new(2018, 9, 9) => "萌黄えも") }
-    it { should include(Date.new(2020, 7, 12) => "桃山みらい") }
+    it { should include(Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }) }
+    it { should include(Date.new(2018, 9, 9) =>  { name: "萌黄えも",   birthday: "9/9",  description: "ポップコーンの日" }) }
+    it { should include(Date.new(2020, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }) }
   end
 
   describe "#birthday_ical" do
@@ -45,15 +45,17 @@ RSpec.describe BirthdayCalendar do
 
     let(:date_characters) do
       {
-        Date.new(2018, 7, 12) => "桃山みらい",
-        Date.new(2018, 9, 9)  => "萌黄えも",
+        Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" },
+        Date.new(2018, 9, 9)  => { name: "萌黄えも",   birthday: "9/9",  description: "ポップコーンの日" },
       }
     end
 
     it { should include "X-WR-CALNAME;VALUE=TEXT:キラッとプリ☆チャンの誕生日" }
     it { should include "DTSTART;VALUE=DATE:20180712" }
     it { should include "SUMMARY:桃山みらいの誕生日" }
+    it { should include "DESCRIPTION:デコレーションケーキの日" }
     it { should include "DTSTART;VALUE=DATE:20180909" }
     it { should include "SUMMARY:萌黄えもの誕生日" }
+    it { should include "DESCRIPTION:ポップコーンの日" }
   end
 end
