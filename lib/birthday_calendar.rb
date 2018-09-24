@@ -71,6 +71,10 @@ class BirthdayCalendar
       cal.event do |e|
         e.summary = "#{character[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
+
+        if character[:description] && !character[:description].empty?
+          e.description = character[:description]
+        end
       end
     end
 
