@@ -9,7 +9,7 @@ class BirthdayCalendar
   attr_reader :config, :name
 
   def initialize(name)
-    @config = YAML.load_file("#{CONFIG_PATH}/#{name}.yml")
+    @config = YAML.load_file("#{CONFIG_PATH}/#{name}.yml").deep_symbolize_keys
     @name = name
   end
 
@@ -47,10 +47,10 @@ class BirthdayCalendar
   def birthdays(from_year:, to_year:)
     date_characters = {}
 
-    config["characters"].each do |character|
+    config[:characters].each do |character|
       (from_year..to_year).each do |year|
-        date = Date.parse("#{year}/#{character["birthday"]}")
-        date_characters[date] = character["name"]
+        date = Date.parse("#{year}/#{character[:birthday]}")
+        date_characters[date] = character[:name]
       rescue ArgumentError => e
         # NOTE: うるう年以外で2/29をparseしようとするとエラーになるので握りつぶす
         raise unless e.message == "invalid date"
@@ -65,7 +65,7 @@ class BirthdayCalendar
   def birthday_ical(date_characters)
     cal = Icalendar::Calendar.new
 
-    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config["title"]}の誕生日")
+    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
 
     date_characters.each do |date, name|
       cal.event do |e|
