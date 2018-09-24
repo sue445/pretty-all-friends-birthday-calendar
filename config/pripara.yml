@@ -1,58 +1,85 @@
 title: "プリパラ"
 characters:
-  - name:     "真中らぁら"
-    birthday: "11/20"
-  - name:     "南みれぃ"
-    birthday: "10/1"
-  - name:     "北条そふぃ"
-    birthday: "7/30"
-  - name:     "東堂シオン"
-    birthday: "1/5"
-  - name:     "ドロシー・ウェスト"
-    birthday: "2/5"
-  - name:     "レオナ・ウェスト"
-    birthday: "2/5"
-  - name:     "黒須あろま"
-    birthday: "6/6"
-  - name:     "白玉みかん"
-    birthday: "10/4"
-  - name:     "ガァルル"
-    birthday: "4/17"
-  - name:     "紫京院ひびき"
-    birthday: "3/27"
-  - name:     "ファルル"
-    birthday: "3/21"
-  - name:     "緑風ふわり"
-    birthday: "8/11"
-  - name:     "真中のん"
-    birthday: "9/6"
-  - name:     "月川ちり"
-    birthday: "11/15"
-  - name:     "太陽ペッパー"
-    birthday: "2/9"
-  - name:     "北条コスモ"
-    birthday: "9/12"
-  - name:     "黄木あじみ"
-    birthday: "11/3"
-  - name:     "愛媛なお"
-    birthday: "11/20"
-  - name:     "夢川ゆい"
-    birthday: "8/18"
-  - name:     "虹色にの"
-    birthday: "3/14"
-  - name:     "幸多みちる"
-    birthday: "7/13"
-  - name:     "華園しゅうか"
-    birthday: "10/17"
-  - name:     "ガァララ・ス・リープ"
-    birthday: "6/10"
-  - name:     "ファララ・ア・ラーム"
-    birthday: "6/10"
-  - name:     "夢川ショウゴ"
-    birthday: "11/23"
-  - name:     "三鷹アサヒ"
-    birthday: "1/1"
-  - name:     "高瀬コヨイ"
-    birthday: "12/24"
-  - name:     "華園みあ"
-    birthday: "3/9"
+  - name:        "真中らぁら"
+    birthday:    "11/20"
+
+  - name:        "南みれぃ"
+    birthday:    "10/1"
+
+  - name:        "北条そふぃ"
+    birthday:    "7/30"
+
+  - name:        "東堂シオン"
+    birthday:    "1/5"
+
+  - name:        "ドロシー・ウェスト"
+    birthday:    "2/5"
+
+  - name:        "レオナ・ウェスト"
+    birthday:    "2/5"
+
+  - name:        "黒須あろま"
+    birthday:    "6/6"
+
+  - name:        "白玉みかん"
+    birthday:    "10/4"
+
+  - name:        "ガァルル"
+    birthday:    "4/17"
+
+  - name:        "紫京院ひびき"
+    birthday:    "3/27"
+
+  - name:        "ファルル"
+    birthday:    "3/21"
+
+  - name:        "緑風ふわり"
+    birthday:    "8/11"
+
+  - name:        "真中のん"
+    birthday:    "9/6"
+
+  - name:        "月川ちり"
+    birthday:    "11/15"
+
+  - name:        "太陽ペッパー"
+    birthday:    "2/9"
+
+  - name:        "北条コスモ"
+    birthday:    "9/12"
+
+  - name:        "黄木あじみ"
+    birthday:    "11/3"
+
+  - name:        "愛媛なお"
+    birthday:    "11/20"
+
+  - name:        "夢川ゆい"
+    birthday:    "8/18"
+
+  - name:        "虹色にの"
+    birthday:    "3/14"
+
+  - name:        "幸多みちる"
+    birthday:    "7/13"
+
+  - name:        "華園しゅうか"
+    birthday:    "10/17"
+
+  - name:        "ガァララ・ス・リープ"
+    birthday:    "6/10"
+
+  - name:        "ファララ・ア・ラーム"
+    birthday:    "6/10"
+
+  - name:        "夢川ショウゴ"
+    birthday:    "11/23"
+
+  - name:        "三鷹アサヒ"
+    birthday:    "1/1"
+
+  - name:        "高瀬コヨイ"
+    birthday:    "12/24"
+
+  - name:        "華園みあ"
+    birthday:    "3/9"
