@@ -2,84 +2,112 @@ title: "プリパラ"
 characters:
   - name:        "真中らぁら"
     birthday:    "11/20"
+    description: "ピザの日"
 
   - name:        "南みれぃ"
     birthday:    "10/1"
+    description: "法の日、メガネの日"
 
   - name:        "北条そふぃ"
     birthday:    "7/30"
+    description: "梅干しの日"
 
   - name:        "東堂シオン"
     birthday:    "1/5"
+    description: "囲碁の日"
 
   - name:        "ドロシー・ウェスト"
     birthday:    "2/5"
+    description: "ふたごの日"
 
   - name:        "レオナ・ウェスト"
     birthday:    "2/5"
+    description: "ふたごの日"
 
   - name:        "黒須あろま"
     birthday:    "6/6"
+    description: "悪魔の日"
 
   - name:        "白玉みかん"
     birthday:    "10/4"
+    description: "使の日"
 
   - name:        "ガァルル"
     birthday:    "4/17"
+    description: "怪獣の日"
 
   - name:        "紫京院ひびき"
     birthday:    "3/27"
+    description: "世界演劇の日"
 
   - name:        "ファルル"
     birthday:    "3/21"
+    description: "目覚めのファルルとして復活した第37話の放送日"
 
   - name:        "緑風ふわり"
     birthday:    "8/11"
+    description: "山の日"
 
   - name:        "真中のん"
     birthday:    "9/6"
+    description: "妹の日"
 
   - name:        "月川ちり"
     birthday:    "11/15"
+    description: "きものの日"
 
   - name:        "太陽ペッパー"
     birthday:    "2/9"
+    description: "肉の日"
 
   - name:        "北条コスモ"
     birthday:    "9/12"
+    description: "宇宙の日"
 
   - name:        "黄木あじみ"
     birthday:    "11/3"
+    description: "文化の日"
 
   - name:        "愛媛なお"
     birthday:    "11/20"
+    description: "らぁらと同じ日"
 
   - name:        "夢川ゆい"
     birthday:    "8/18"
+    description: "米の日"
 
   - name:        "虹色にの"
     birthday:    "3/14"
+    description: "円周率の日"
 
   - name:        "幸多みちる"
     birthday:    "7/13"
+    description: "オカルト記念日"
 
   - name:        "華園しゅうか"
     birthday:    "10/17"
+    description: "貯蓄の日"
 
   - name:        "ガァララ・ス・リープ"
     birthday:    "6/10"
+    description: "時の記念日"
 
   - name:        "ファララ・ア・ラーム"
     birthday:    "6/10"
+    description: "時の記念日"
 
   - name:        "夢川ショウゴ"
     birthday:    "11/23"
+    description: "いい兄さんの日"
 
   - name:        "三鷹アサヒ"
     birthday:    "1/1"
+    description: "元日"
 
   - name:        "高瀬コヨイ"
     birthday:    "12/24"
+    description: "クリスマス・イヴ"
 
   - name:        "華園みあ"
     birthday:    "3/9"
+    description: "上葉みあのモデルとなったPrizmmy☆の日下部美愛の誕生日と同一"
