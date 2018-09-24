@@ -10,8 +10,6 @@ RSpec.describe BirthdayCalendar do
       temp_dir_path.join("prichan.ics")
     end
 
-    let(:ical_file) { temp_dir_path.join("prichan.ics") }
-
     it { should be_exist }
   end
 
@@ -23,8 +21,6 @@ RSpec.describe BirthdayCalendar do
 
       temp_dir_path.join("prichan.ics")
     end
-
-    let(:ical_file) { temp_dir_path.join("prichan.ics") }
 
     it { should be_exist }
   end
