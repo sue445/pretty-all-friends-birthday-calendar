@@ -43,14 +43,14 @@ class BirthdayCalendar
   # Get birthdays within `from_year` and `to_year`
   # @param from_year [Integer]
   # @param to_year [Integer]
-  # @return [Hash<Date, String>] Key: birthday, Value: character name
+  # @return [Hash<Date, Hash<Symbol, String>>] Key: birthday, Value: character data
   def birthdays(from_year:, to_year:)
     date_characters = {}
 
     config[:characters].each do |character|
       (from_year..to_year).each do |year|
         date = Date.parse("#{year}/#{character[:birthday]}")
-        date_characters[date] = character[:name]
+        date_characters[date] = character
       rescue ArgumentError => e
         # NOTE: うるう年以外で2/29をparseしようとするとエラーになるので握りつぶす
         raise unless e.message == "invalid date"
@@ -60,16 +60,16 @@ class BirthdayCalendar
     Hash[date_characters.sort]
   end
 
-  # @param date_characters [Hash<Date, String>]
+  # @param date_characters [Hash<Date, Hash<Symbol, String>>]
   # @return [String] ical data
   def birthday_ical(date_characters)
     cal = Icalendar::Calendar.new
 
     cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
 
-    date_characters.each do |date, name|
+    date_characters.each do |date, character|
       cal.event do |e|
-        e.summary = "#{name}の誕生日"
+        e.summary = "#{character[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
       end
     end

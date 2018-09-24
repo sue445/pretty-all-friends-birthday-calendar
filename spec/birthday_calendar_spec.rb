@@ -35,9 +35,9 @@ RSpec.describe BirthdayCalendar do
     let(:from_year) { 2018 }
     let(:to_year)   { 2020 }
 
-    it { should include(Date.new(2018, 7, 12) => "桃山みらい") }
-    it { should include(Date.new(2018, 9, 9) => "萌黄えも") }
-    it { should include(Date.new(2020, 7, 12) => "桃山みらい") }
+    it { should include(Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12" }) }
+    it { should include(Date.new(2018, 9, 9) => { name: "萌黄えも", birthday: "9/9"}) }
+    it { should include(Date.new(2020, 7, 12) => { name: "桃山みらい", birthday: "7/12"}) }
   end
 
   describe "#birthday_ical" do
@@ -45,8 +45,8 @@ RSpec.describe BirthdayCalendar do
 
     let(:date_characters) do
       {
-        Date.new(2018, 7, 12) => "桃山みらい",
-        Date.new(2018, 9, 9)  => "萌黄えも",
+        Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12" },
+        Date.new(2018, 9, 9)  => { name: "萌黄えも", birthday: "9/9"},
       }
     end
 
