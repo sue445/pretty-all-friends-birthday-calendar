@@ -16,8 +16,7 @@ git config user.email ${EMAIL}
 
 bundle exec rake generate_ical
 
-# DTSTAMPとUIDは毎回自動生成されるため、そこ以外の行の変更を検知する
-changed_num=`git --no-pager diff --unified=0 -- docs/*.ics | grep -v "@@" | grep -v " a/" | grep -v " b/" | grep -v "index " | grep -v "DTSTAMP:" | grep -v "UID:" | wc -l`
+changed_num=`git --no-pager diff --unified=0 -- docs/*.ics | grep -v "@@" | grep -v " a/" | grep -v " b/" | grep -v "index " | wc -l`
 
 if [ $changed_num == "0" ]; then
   echo "Not changed"

@@ -1,5 +1,6 @@
 require "date"
 require "yaml"
+require "digest/sha2"
 require "icalendar"
 require "active_support/all"
 
@@ -94,6 +95,9 @@ class BirthdayCalendar
       chara = calendar_row.chara
 
       cal.event do |e|
+        e.dtstamp = nil
+        e.uid = generate_id(name: chara[:name], date: date)
+
         e.summary = "#{chara[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
@@ -105,5 +109,11 @@ class BirthdayCalendar
 
     cal.publish
     cal.to_ical
+  end
+
+  private
+
+  def generate_id(name:, date:)
+    Digest::SHA256.hexdigest([config_name, name, date].join)
   end
 end
