@@ -1,5 +1,6 @@
 require "date"
 require "yaml"
+require "digest/sha2"
 require "icalendar"
 require "active_support/all"
 
@@ -28,11 +29,11 @@ end
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
-  attr_reader :config, :name
+  attr_reader :config, :config_name
 
-  def initialize(name)
-    @config = YAML.load_file("#{CONFIG_PATH}/#{name}.yml").deep_symbolize_keys
-    @name = name
+  def initialize(config_name)
+    @config = YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml").deep_symbolize_keys
+    @config_name = config_name
   end
 
   # @param dist_dir [String]
@@ -54,10 +55,10 @@ class BirthdayCalendar
   # @param dist_dir [String]
   def generate_ical_file(dist_dir)
     from_year = Date.today.year
-    date_characters = birthdays(from_year: from_year, to_year: from_year + 2)
-    ical = birthday_ical(date_characters)
+    calendar_rows = birthdays(from_year: from_year, to_year: from_year + 2)
+    ical = birthday_ical(calendar_rows)
 
-    File.open("#{dist_dir}/#{name}.ics", "wb") do |f|
+    File.open("#{dist_dir}/#{config_name}.ics", "wb") do |f|
       f.write(ical)
     end
   end
@@ -94,6 +95,9 @@ class BirthdayCalendar
       chara = calendar_row.chara
 
       cal.event do |e|
+        e.dtstamp = nil
+        e.uid = generate_id(name: chara[:name], date: date)
+
         e.summary = "#{chara[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
@@ -105,5 +109,11 @@ class BirthdayCalendar
 
     cal.publish
     cal.to_ical
+  end
+
+  private
+
+  def generate_id(name:, date:)
+    Digest::SHA256.hexdigest([config_name, name, date].join)
   end
 end
