@@ -3,6 +3,28 @@ require "yaml"
 require "icalendar"
 require "active_support/all"
 
+class CalendarRow
+  # @!attribute date
+  #   @return [Date]
+  attr_accessor :date
+
+  # @!attribute character
+  #   @return [Hash<Symbol, String>]
+  attr_accessor :chara
+
+  def initialize(date: nil, chara: nil)
+    self.date = date
+    self.chara = chara
+  end
+
+  def ==(other)
+    return false unless other
+    return false unless other.is_a? CalendarRow
+
+    date == other.date && chara == other.chara
+  end
+end
+
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
@@ -43,37 +65,40 @@ class BirthdayCalendar
   # Get birthdays within `from_year` and `to_year`
   # @param from_year [Integer]
   # @param to_year [Integer]
-  # @return [Hash<Date, Hash<Symbol, String>>] Key: birthday, Value: character data
+  # @return [Array<CalendarRow>]
   def birthdays(from_year:, to_year:)
-    date_characters = {}
+    rows = []
 
     config[:characters].each do |character|
       (from_year..to_year).each do |year|
         date = Date.parse("#{year}/#{character[:birthday]}")
-        date_characters[date] = character
+        rows << CalendarRow.new(date: date, chara: character)
       rescue ArgumentError => e
         # NOTE: うるう年以外で2/29をparseしようとするとエラーになるので握りつぶす
         raise unless e.message == "invalid date"
       end
     end
 
-    Hash[date_characters.sort]
+    rows.sort_by { |row| [row.date, row.chara[:name]] }
   end
 
-  # @param date_characters [Hash<Date, Hash<Symbol, String>>]
+  # @param calendar_rows [Array<CalendarRow>]
   # @return [String] ical data
-  def birthday_ical(date_characters)
+  def birthday_ical(calendar_rows)
     cal = Icalendar::Calendar.new
 
     cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
 
-    date_characters.each do |date, character|
+    calendar_rows.each do |calendar_row|
+      date = calendar_row.date
+      chara = calendar_row.chara
+
       cal.event do |e|
-        e.summary = "#{character[:name]}の誕生日"
+        e.summary = "#{chara[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
-        if character[:description] && !character[:description].empty?
-          e.description = character[:description]
+        if chara[:description] && !chara[:description].empty?
+          e.description = chara[:description]
         end
       end
     end
