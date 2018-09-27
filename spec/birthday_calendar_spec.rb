@@ -37,13 +37,13 @@ RSpec.describe BirthdayCalendar do
   end
 
   describe "#birthday_ical" do
-    subject { calendar.birthday_ical(date_characters) }
+    subject { calendar.birthday_ical(calendar_rows) }
 
-    let(:date_characters) do
-      {
-        Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" },
-        Date.new(2018, 9, 9)  => { name: "萌黄えも",   birthday: "9/9",  description: "ポップコーンの日" },
-      }
+    let(:calendar_rows) do
+      [
+        CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }),
+        CalendarRow.new(date: Date.new(2018, 9, 9), chara: {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" }),
+      ]
     end
 
     it { should include "X-WR-CALNAME;VALUE=TEXT:キラッとプリ☆チャンの誕生日" }

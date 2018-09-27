@@ -82,20 +82,23 @@ class BirthdayCalendar
     rows.sort_by { |row| [row.date, row.chara[:name]] }
   end
 
-  # @param date_characters [Hash<Date, Hash<Symbol, String>>]
+  # @param calendar_rows [Array<CalendarRow>]
   # @return [String] ical data
-  def birthday_ical(date_characters)
+  def birthday_ical(calendar_rows)
     cal = Icalendar::Calendar.new
 
     cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
 
-    date_characters.each do |date, character|
+    calendar_rows.each do |calendar_row|
+      date = calendar_row.date
+      chara = calendar_row.chara
+
       cal.event do |e|
-        e.summary = "#{character[:name]}の誕生日"
+        e.summary = "#{chara[:name]}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
-        if character[:description] && !character[:description].empty?
-          e.description = character[:description]
+        if chara[:description] && !chara[:description].empty?
+          e.description = chara[:description]
         end
       end
     end
