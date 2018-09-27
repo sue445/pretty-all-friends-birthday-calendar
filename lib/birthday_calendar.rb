@@ -54,8 +54,8 @@ class BirthdayCalendar
   # @param dist_dir [String]
   def generate_ical_file(dist_dir)
     from_year = Date.today.year
-    date_characters = birthdays(from_year: from_year, to_year: from_year + 2)
-    ical = birthday_ical(date_characters)
+    calendar_rows = birthdays(from_year: from_year, to_year: from_year + 2)
+    ical = birthday_ical(calendar_rows)
 
     File.open("#{dist_dir}/#{name}.ics", "wb") do |f|
       f.write(ical)
