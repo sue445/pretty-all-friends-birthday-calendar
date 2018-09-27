@@ -31,9 +31,9 @@ RSpec.describe BirthdayCalendar do
     let(:from_year) { 2018 }
     let(:to_year)   { 2020 }
 
-    it { should include(Date.new(2018, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }) }
-    it { should include(Date.new(2018, 9, 9) =>  { name: "萌黄えも",   birthday: "9/9",  description: "ポップコーンの日" }) }
-    it { should include(Date.new(2020, 7, 12) => { name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" })) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 9, 9), chara: {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" })) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" })) }
   end
 
   describe "#birthday_ical" do
