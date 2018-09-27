@@ -1,6 +1,9 @@
 RSpec.describe BirthdayCalendar do
   let(:calendar) { BirthdayCalendar.new("prichan") }
 
+  let(:mirai) { {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" } }
+  let(:emo)   { {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" } }
+
   describe ".generate_all_ical_files" do
     include_context "uses temp dir"
 
@@ -31,9 +34,9 @@ RSpec.describe BirthdayCalendar do
     let(:from_year) { 2018 }
     let(:to_year)   { 2020 }
 
-    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" })) }
-    it { should include(CalendarRow.new(date: Date.new(2018, 9, 9), chara: {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" })) }
-    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" })) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: mirai)) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 9, 9),  chara: emo)) }
+    it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: mirai)) }
   end
 
   describe "#birthday_ical" do
@@ -41,8 +44,8 @@ RSpec.describe BirthdayCalendar do
 
     let(:calendar_rows) do
       [
-        CalendarRow.new(date: Date.new(2018, 7, 12), chara: {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" }),
-        CalendarRow.new(date: Date.new(2018, 9, 9), chara: {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" }),
+        CalendarRow.new(date: Date.new(2018, 7, 12), chara: mirai),
+        CalendarRow.new(date: Date.new(2018, 9, 9),  chara: emo),
       ]
     end
 
