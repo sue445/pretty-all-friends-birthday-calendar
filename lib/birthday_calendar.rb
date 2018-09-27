@@ -28,11 +28,11 @@ end
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
-  attr_reader :config, :name
+  attr_reader :config, :config_name
 
-  def initialize(name)
-    @config = YAML.load_file("#{CONFIG_PATH}/#{name}.yml").deep_symbolize_keys
-    @name = name
+  def initialize(config_name)
+    @config = YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml").deep_symbolize_keys
+    @config_name = config_name
   end
 
   # @param dist_dir [String]
@@ -57,7 +57,7 @@ class BirthdayCalendar
     calendar_rows = birthdays(from_year: from_year, to_year: from_year + 2)
     ical = birthday_ical(calendar_rows)
 
-    File.open("#{dist_dir}/#{name}.ics", "wb") do |f|
+    File.open("#{dist_dir}/#{config_name}.ics", "wb") do |f|
       f.write(ical)
     end
   end
