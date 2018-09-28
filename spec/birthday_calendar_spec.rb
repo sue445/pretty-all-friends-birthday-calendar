@@ -43,7 +43,7 @@ RSpec.describe BirthdayCalendar do
 
       it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: mirai)) }
       it { should include(CalendarRow.new(date: Date.new(2018, 9, 9),  chara: emo)) }
-      it { should include(CalendarRow.new(date: Date.new(2018, 7, 12), chara: mirai)) }
+      it { should include(CalendarRow.new(date: Date.new(2020, 7, 12), chara: mirai)) }
     end
 
     context "when pripara" do
