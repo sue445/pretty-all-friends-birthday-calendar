@@ -1,19 +1,34 @@
-version: 2.0
+version: 2.1
 
 default: &default
   docker:
     - image: circleci/ruby:2.5.1
   working_directory: ~/app
 
-save_bundle_cache_option: &save_bundle_cache_option
-  key: v1-bundle-{{ checksum "Gemfile.lock" }}
-  paths:
-    - ~/app/vendor/bundle
+commands:
+  setup_bundle:
+    description: "Setup bundle with cache"
+    steps:
+      - restore_cache:
+          keys:
+            - v1-bundle-{{ checksum "Gemfile.lock" }}
+            - v1-bundle
 
-restore_bundle_cache_option: &restore_bundle_cache_option
-  keys:
-    - v1-bundle-{{ checksum "Gemfile.lock" }}
-    - v1-bundle
+      - run:
+          name: Setup bundle
+          command: |
+            set -xe
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            bundle clean
+
+            # Resolve bundler version difference between Gemfile.lock and pre-installed in CI
+            gem install restore_bundled_with --no-document
+            restore-bundled-with
+
+      - save_cache:
+          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ~/app/vendor/bundle
 
 jobs:
   build:
@@ -21,11 +36,7 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          <<: *restore_bundle_cache_option
-      - run: .circleci/setup.sh
-      - save_cache:
-          <<: *save_bundle_cache_option
+      - setup_bundle
       - run: bundle exec rspec
       - run:
           name: generate_ical (dry run)
@@ -38,13 +49,8 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          <<: *restore_bundle_cache_option
-      - run: .circleci/setup.sh
-      - save_cache:
-          <<: *save_bundle_cache_option
+      - setup_bundle
       - run: .circleci/update_ical.sh
-
 
 workflows:
   version: 2
