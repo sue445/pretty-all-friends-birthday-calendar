@@ -17,9 +17,19 @@ characters:
 
   - name:        "上葉みあ"
     birthday:    "8/8"
+    description: "ゾロ目の日"
 
   - name:        "深山れいな"
     birthday:    "10/30"
+    description: "初恋の日"
+
+  - name:        "大瑠璃あやみ"
+    birthday:    "1/6"
+    description: "色の日"
+
+  - name:        "志々美かりん"
+    birthday:    "5/10"
+    description: "ファイトの日"
 
   - name:        "彩瀬なる"
     birthday:    "3/3"
