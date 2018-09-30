@@ -12,3 +12,5 @@ task :generate_ical, [:config_name] => :environment do |_task, args|
     BirthdayCalendar.generate_all_ical_files("#{__dir__}/docs")
   end
 end
+
+task :default => :generate_ical
