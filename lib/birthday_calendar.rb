@@ -29,10 +29,10 @@ end
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
-  attr_reader :config, :config_name
+  attr_reader :config_hash, :config_name
 
   def initialize(config_name)
-    @config = YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml").deep_symbolize_keys
+    @config_hash = YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml").deep_symbolize_keys
     @config_name = config_name
   end
 
@@ -70,7 +70,7 @@ class BirthdayCalendar
   def birthdays(from_year:, to_year:)
     rows = []
 
-    config[:characters].each do |character|
+    config_hash[:characters].each do |character|
       (from_year..to_year).each do |year|
         date = Date.parse("#{year}/#{character[:birthday]}")
         rows << CalendarRow.new(date: date, chara: character)
@@ -88,7 +88,7 @@ class BirthdayCalendar
   def birthday_ical(calendar_rows)
     cal = Icalendar::Calendar.new
 
-    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
+    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config_hash[:title]}の誕生日")
 
     calendar_rows.each do |calendar_row|
       date = calendar_row.date
