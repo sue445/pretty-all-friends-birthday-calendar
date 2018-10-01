@@ -3,10 +3,10 @@ RSpec.describe BirthdayCalendar do
 
   let(:config_name) { "prichan" }
 
-  let(:mirai) { {name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日" } }
-  let(:emo)   { {name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日" } }
-  let(:laala) { {name: "真中らぁら", birthday: "11/20", description: "ピザの日" } }
-  let(:nao)   { {name: "愛媛なお", birthday: "11/20", description: "らぁらと同じ日" } }
+  let(:mirai) { Hashie::Mash.new(name: "桃山みらい", birthday: "7/12", description: "デコレーションケーキの日") }
+  let(:emo)   { Hashie::Mash.new(name: "萌黄えも", birthday: "9/9", description: "ポップコーンの日") }
+  let(:laala) { Hashie::Mash.new(name: "真中らぁら", birthday: "11/20", description: "ピザの日") }
+  let(:nao)   { Hashie::Mash.new(name: "愛媛なお", birthday: "11/20", description: "らぁらと同じ日") }
 
   describe ".generate_all_ical_files" do
     include_context "uses temp dir"
