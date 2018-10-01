@@ -1,5 +1,6 @@
 title: "プリパラ"
 characters:
+  # プリパラ
   - name:        "真中らぁら"
     birthday:    "11/20"
     description: "ピザの日"
@@ -72,6 +73,7 @@ characters:
     birthday:    "11/20"
     description: "らぁらと同じ日"
 
+  # アイドルタイムプリパラ
   - name:        "夢川ゆい"
     birthday:    "8/18"
     description: "米の日"

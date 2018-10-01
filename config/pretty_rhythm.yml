@@ -1,5 +1,6 @@
 title: "プリティーリズム"
 characters:
+  # オーロラドリーム
   - name:        "春音あいら"
     birthday:    "9/3"
 
@@ -15,6 +16,7 @@ characters:
   - name:        "城之内セレナ"
     birthday:    "7/6"
 
+  # ディアマイフューチャー
   - name:        "上葉みあ"
     birthday:    "8/8"
     description: "ゾロ目の日"
@@ -31,6 +33,7 @@ characters:
     birthday:    "5/10"
     description: "ファイトの日"
 
+  # レインボーライブ
   - name:        "彩瀬なる"
     birthday:    "3/3"
 
