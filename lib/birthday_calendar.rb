@@ -3,6 +3,7 @@ require "yaml"
 require "digest/sha2"
 require "icalendar"
 require "active_support/all"
+require "hashie/mash"
 
 class CalendarRow
   # @!attribute date
@@ -10,7 +11,7 @@ class CalendarRow
   attr_accessor :date
 
   # @!attribute character
-  #   @return [Hash<Symbol, String>]
+  #   @return [Hashie::Mash]
   attr_accessor :chara
 
   def initialize(date: nil, chara: nil)
@@ -29,10 +30,10 @@ end
 class BirthdayCalendar
   CONFIG_PATH = "#{__dir__}/../config"
 
-  attr_reader :config, :config_name
+  attr_reader :config_hash, :config_name
 
   def initialize(config_name)
-    @config = YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml").deep_symbolize_keys
+    @config_hash = Hashie::Mash.new(YAML.load_file("#{CONFIG_PATH}/#{config_name}.yml"))
     @config_name = config_name
   end
 
@@ -70,17 +71,17 @@ class BirthdayCalendar
   def birthdays(from_year:, to_year:)
     rows = []
 
-    config[:characters].each do |character|
+    config_hash.characters.each do |chara|
       (from_year..to_year).each do |year|
-        date = Date.parse("#{year}/#{character[:birthday]}")
-        rows << CalendarRow.new(date: date, chara: character)
+        date = Date.parse("#{year}/#{chara.birthday}")
+        rows << CalendarRow.new(date: date, chara: chara)
       rescue ArgumentError => e
         # NOTE: うるう年以外で2/29をparseしようとするとエラーになるので握りつぶす
         raise unless e.message == "invalid date"
       end
     end
 
-    rows.sort_by { |row| [row.date, row.chara[:name]] }
+    rows.sort_by { |row| [row.date, row.chara.name] }
   end
 
   # @param calendar_rows [Array<CalendarRow>]
@@ -88,7 +89,7 @@ class BirthdayCalendar
   def birthday_ical(calendar_rows)
     cal = Icalendar::Calendar.new
 
-    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config[:title]}の誕生日")
+    cal.append_custom_property("X-WR-CALNAME;VALUE=TEXT", "#{config_hash.title}の誕生日")
 
     calendar_rows.each do |calendar_row|
       date = calendar_row.date
@@ -96,14 +97,12 @@ class BirthdayCalendar
 
       cal.event do |e|
         e.dtstamp = nil
-        e.uid = generate_id(name: chara[:name], date: date)
+        e.uid = generate_id(name: chara.name, date: date)
 
-        e.summary = "#{chara[:name]}の誕生日"
+        e.summary = "#{chara.name}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
-        if chara[:description] && !chara[:description].empty?
-          e.description = chara[:description]
-        end
+        e.description = chara.description unless chara.description.blank?
       end
     end
 

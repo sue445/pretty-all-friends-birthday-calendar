@@ -8,6 +8,7 @@ GEM
       tzinfo (~> 1.1)
     concurrent-ruby (1.0.5)
     diff-lcs (1.3)
+    hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     icalendar (2.5.0)
@@ -39,10 +40,11 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  hashie
   icalendar
   rake
   rspec
   rspec-temp_dir
 
 BUNDLED WITH
-   1.16.4
+   1.16.5
