@@ -67,11 +67,7 @@ RSpec.describe BirthdayCalendar do
     end
 
     it { should include "X-WR-CALNAME;VALUE=TEXT:キラッとプリ☆チャンの誕生日" }
-    it { should include "DTSTART;VALUE=DATE:20180712" }
-    it { should include "SUMMARY:桃山みらいの誕生日" }
-    it { should include "DESCRIPTION:デコレーションケーキの日" }
-    it { should include "DTSTART;VALUE=DATE:20180909" }
-    it { should include "SUMMARY:萌黄えもの誕生日" }
-    it { should include "DESCRIPTION:ポップコーンの日" }
+    it { should include "DTSTART;VALUE=DATE:20180712\r\nDESCRIPTION:デコレーションケーキの日\r\nSUMMARY:桃山みらいの誕生日\r\n" }
+    it { should include "DTSTART;VALUE=DATE:20180909\r\nDESCRIPTION:ポップコーンの日\r\nSUMMARY:萌黄えもの誕生日\r\n" }
   end
 end
