@@ -2,7 +2,6 @@ require "date"
 require "yaml"
 require "digest/sha2"
 require "icalendar"
-require "active_support/all"
 require "hashie/mash"
 
 class CalendarRow
@@ -102,7 +101,9 @@ class BirthdayCalendar
         e.summary = "#{chara.name}の誕生日"
         e.dtstart = Icalendar::Values::Date.new(date)
 
-        e.description = chara.description unless chara.description.blank?
+        if chara.description? && !chara.description.empty?
+          e.description = chara.description
+        end
       end
     end
 
