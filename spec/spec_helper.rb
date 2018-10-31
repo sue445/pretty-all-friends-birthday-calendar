@@ -1,4 +1,4 @@
-require "rspec/temp_dir"
+ENV["ENVIRONMENT"] = "test"
 
 require_relative "../lib/birthday_calendar"
 

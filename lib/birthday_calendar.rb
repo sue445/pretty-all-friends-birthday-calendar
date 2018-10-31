@@ -1,8 +1,10 @@
+ENV["ENVIRONMENT"] ||= "development"
+
+Bundler.require(*[:default, ENV["ENVIRONMENT"]].compact)
+
 require "date"
 require "yaml"
 require "digest/sha2"
-require "icalendar"
-require "hashie/mash"
 
 class CalendarRow
   # @!attribute date

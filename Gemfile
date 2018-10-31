@@ -6,6 +6,9 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "hashie"
 gem "icalendar"
-gem "rake"
-gem "rspec"
-gem "rspec-temp_dir"
+gem "rake", require: false
+
+group :test do
+  gem "rspec"
+  gem "rspec-temp_dir"
+end
