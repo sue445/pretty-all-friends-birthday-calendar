@@ -2,7 +2,6 @@ require "date"
 require "yaml"
 require "digest/sha2"
 require "icalendar"
-require "active_support/all"
 require "hashie/mash"
 
 class CalendarRow
