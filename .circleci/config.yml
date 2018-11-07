@@ -1,34 +1,12 @@
 version: 2.1
 
+orbs:
+  sue445-bundle-install: sue445/bundle-install@0.1.0
+
 default: &default
   docker:
     - image: circleci/ruby:2.5.3
   working_directory: ~/app
-
-commands:
-  setup_bundle:
-    description: "Setup bundle with cache"
-    steps:
-      - restore_cache:
-          keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
-            - v1-bundle
-
-      - run:
-          name: Setup bundle
-          command: |
-            set -xe
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-            bundle clean
-
-            # Resolve bundler version difference between Gemfile.lock and pre-installed in CI
-            gem install restore_bundled_with --no-document
-            restore-bundled-with
-
-      - save_cache:
-          key: v1-bundle-{{ checksum "Gemfile.lock" }}
-          paths:
-            - ~/app/vendor/bundle
 
 jobs:
   build:
@@ -36,7 +14,7 @@ jobs:
 
     steps:
       - checkout
-      - setup_bundle
+      - sue445-bundle-install/bundle-install
       - run: bundle exec rspec
       - run:
           name: generate_ical (dry run)
@@ -49,7 +27,7 @@ jobs:
 
     steps:
       - checkout
-      - setup_bundle
+      - sue445-bundle-install/bundle-install
       - run: .circleci/update_ical.sh
 
 workflows:
