@@ -1,20 +1,22 @@
 version: 2.1
 
 orbs:
-  sue445-bundle-install: sue445/bundle-install@0.1.0
+  ruby-orbs: sue445/ruby-orbs@volatile
 
-default: &default
-  docker:
-    - image: circleci/ruby:2.5.3
-  working_directory: ~/app
+executors:
+  default:
+    docker:
+      - image: circleci/ruby:2.5.3
+    working_directory: ~/app
 
 jobs:
   build:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
-      - sue445-bundle-install/bundle-install
+      - ruby-orbs/bundle-install
       - run: bundle exec rspec
       - run:
           name: generate_ical (dry run)
@@ -23,11 +25,12 @@ jobs:
             git --no-pager diff
 
   update_ical:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
-      - sue445-bundle-install/bundle-install
+      - ruby-orbs/bundle-install
       - run: .circleci/update_ical.sh
 
 workflows:
