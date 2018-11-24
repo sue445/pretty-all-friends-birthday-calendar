@@ -20,6 +20,10 @@ characters:
     birthday:    "6/9"
     description: "ロックの日"
 
+  - name:        "紫藤める"
+    birthday:    "4/23"
+    description: "英語デー"
+
   - name:        "マリー"
     birthday:    "7/4"
 
