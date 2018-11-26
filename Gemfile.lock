@@ -20,7 +20,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rspec-temp_dir (1.0.0)
+    rspec-temp_dir (1.1.0)
       rspec (>= 3.0)
 
 PLATFORMS
