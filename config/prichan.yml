@@ -24,6 +24,10 @@ characters:
     birthday:    "4/23"
     description: "英語デー"
 
+  - name:        "白鳥アンジュ"
+    birthday:    "11/11"
+    description: "宝石の日"
+
   - name:        "マリー"
     birthday:    "7/4"
 
@@ -35,7 +39,3 @@ characters:
 
   - name:        "バディス"
     birthday:    "3/23"
-
-  - name:        "白鳥アンジュ"
-    birthday:    "11/11"
-    description: "宝石の日"
