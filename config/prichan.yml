@@ -39,3 +39,8 @@ characters:
 
   - name:        "バディス"
     birthday:    "3/23"
+
+  # シーズン2
+  - name:        "金森まりあ"
+    birthday:    "5/9"
+    description: "アイスクリームの日"
