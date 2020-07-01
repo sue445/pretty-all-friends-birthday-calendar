@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    diff-lcs (1.4.3)
+    diff-lcs (1.4.4)
     hashie (4.1.0)
     icalendar (2.6.1)
       ice_cube (~> 0.16)
