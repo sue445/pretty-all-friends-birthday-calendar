@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   ruby-orbs: sue445/ruby-orbs@volatile
+  slack:     circleci/slack@volatile
 
 executors:
   default:
@@ -24,6 +25,7 @@ jobs:
           command: |
             bundle exec rake generate_ical
             git --no-pager diff
+      - slack/status
 
   update_ical:
     executor:
@@ -34,6 +36,7 @@ jobs:
       - ruby-orbs/bundle-install:
           cache_key_prefix: "v2-bundle"
       - run: .circleci/update_ical.sh
+      - slack/status
 
 workflows:
   version: 2
