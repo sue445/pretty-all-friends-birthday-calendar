@@ -28,6 +28,9 @@ characters:
     birthday:    "11/11"
     description: "宝石の日"
 
+  - name:        "七星あいら"
+    birthday:    "9/3"
+
   - name:        "マリー"
     birthday:    "7/4"
 
