@@ -59,3 +59,7 @@ characters:
   # シーズン3
   - name:        "メルパン"
     birthday:    "8/8"
+
+  - name:        "キラッCHU"
+    birthday:    "10/10"
+    description: "みらいが初めてキラッCHUを描いた日"
