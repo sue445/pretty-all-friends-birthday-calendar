@@ -25,7 +25,7 @@ jobs:
           command: |
             bundle exec rake generate_ical
             git --no-pager diff
-      - slack/status
+      - slack/notify-on-failure
 
   update_ical:
     executor:
@@ -36,7 +36,7 @@ jobs:
       - ruby-orbs/bundle-install:
           cache_key_prefix: "v2-bundle"
       - run: .circleci/update_ical.sh
-      - slack/status
+      - slack/notify-on-failure
 
 workflows:
   version: 2
