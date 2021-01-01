@@ -56,8 +56,8 @@ class BirthdayCalendar
 
   # @param dist_dir [String]
   def generate_ical_file(dist_dir)
-    from_year = Date.today.year
-    calendar_rows = birthdays(from_year: from_year, to_year: from_year + 2)
+    current_year = Date.today.year
+    calendar_rows = birthdays(from_year: current_year - 1, to_year: current_year + 2)
     ical = birthday_ical(calendar_rows)
 
     File.open("#{dist_dir}/#{config_name}.ics", "wb") do |f|
