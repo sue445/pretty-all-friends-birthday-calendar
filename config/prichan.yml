@@ -57,6 +57,9 @@ characters:
     birthday:    "4/22"
     description: "ダイヤモンド原石の日"
 
+  - name:        "幸瀬なる"
+    birthday:    "3/3"
+
   # シーズン3
   - name:        "メルパン"
     birthday:    "8/8"
