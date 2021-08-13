@@ -75,6 +75,7 @@ characters:
 
   - name:        "ジュリィ"
     birthday:    "7/10"
+    description: "プリパラ筐体の稼働開始日"
 
   # アイドルタイムプリパラ
   - name:        "夢川ゆい"
