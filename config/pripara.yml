@@ -1,6 +1,6 @@
 title: "プリパラ"
 characters:
-  # プリパラ
+  # プリパラ Season1
   - name:        "真中らぁら"
     birthday:    "11/20"
     description: "ピザの日"
@@ -25,6 +25,19 @@ characters:
     birthday:    "2/5"
     description: "ふたごの日"
 
+  - name:        "真中のん"
+    birthday:    "9/6"
+    description: "妹の日"
+
+  - name:        "北条コスモ"
+    birthday:    "9/12"
+    description: "宇宙の日"
+
+  - name:        "愛媛なお"
+    birthday:    "11/20"
+    description: "らぁらと同じ日"
+
+  # プリパラ Season2
   - name:        "黒須あろま"
     birthday:    "6/6"
     description: "悪魔の日"
@@ -49,10 +62,11 @@ characters:
     birthday:    "8/11"
     description: "山の日"
 
-  - name:        "真中のん"
-    birthday:    "9/6"
-    description: "妹の日"
-
+  - name:        "黄木あじみ"
+    birthday:    "11/3"
+    description: "文化の日"
+ 
+  # プリパラ Season3
   - name:        "月川ちり"
     birthday:    "11/15"
     description: "きものの日"
@@ -60,18 +74,6 @@ characters:
   - name:        "太陽ペッパー"
     birthday:    "2/9"
     description: "肉の日"
-
-  - name:        "北条コスモ"
-    birthday:    "9/12"
-    description: "宇宙の日"
-
-  - name:        "黄木あじみ"
-    birthday:    "11/3"
-    description: "文化の日"
-
-  - name:        "愛媛なお"
-    birthday:    "11/20"
-    description: "らぁらと同じ日"
 
   - name:        "ジュリィ"
     birthday:    "7/10"
