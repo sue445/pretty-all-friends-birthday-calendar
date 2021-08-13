@@ -73,6 +73,9 @@ characters:
     birthday:    "11/20"
     description: "らぁらと同じ日"
 
+  - name:        "ジュリィ"
+    birthday:    "7/10"
+
   # アイドルタイムプリパラ
   - name:        "夢川ゆい"
     birthday:    "8/18"
