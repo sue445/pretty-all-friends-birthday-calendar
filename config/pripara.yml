@@ -79,6 +79,10 @@ characters:
     birthday:    "7/10"
     description: "プリパラ筐体の稼働開始日"
 
+  - name:        "ジャニス"
+    birthday:    "7/10"
+    description: "双子ということで女神ジュリィと同じ誕生日"
+
   - name:        "じゅのん"
     birthday:    "1/23"
 
