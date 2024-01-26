@@ -13,6 +13,7 @@ icalのURLをGoogleカレンダーなどに登録することで、自分のカ�
 * プリパラ : https://sue445.github.io/pretty-all-friends-birthday-calendar/pripara.ics
 * キラッとプリ☆チャン : https://sue445.github.io/pretty-all-friends-birthday-calendar/prichan.ics
 * ワッチャプリマジ！ : https://sue445.github.io/pretty-all-friends-birthday-calendar/primagi.ics
+* ひみつのアイプリ : https://sue445.github.io/pretty-all-friends-birthday-calendar/aipri.ics
 
 ## 誕生日の編集方法
 既存のデータを参考に [config/](config/) のymlファイルにキャラ名と誕生日を追加・編集してください。
