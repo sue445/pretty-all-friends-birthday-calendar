@@ -6,7 +6,7 @@ GEM
     icalendar (2.10.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
-    rake (13.2.0)
+    rake (13.2.1)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
