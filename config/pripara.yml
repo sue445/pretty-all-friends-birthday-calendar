@@ -37,6 +37,10 @@ characters:
     birthday:    "11/20"
     description: "らぁらと同じ日"
 
+  - name:        "鍋島ちゃん子"
+    birthday:    "12/28"
+    description: "相撲の日"
+
   # プリパラ Season2
   - name:        "黒須あろま"
     birthday:    "6/6"
@@ -48,7 +52,7 @@ characters:
 
   - name:        "ガァルル"
     birthday:    "4/17"
-    description: "怪獣の日"
+    description: "怪獣の日、恐竜の日"
 
   - name:        "紫京院ひびき"
     birthday:    "3/27"
@@ -56,7 +60,7 @@ characters:
 
   - name:        "ファルル"
     birthday:    "3/21"
-    description: "目覚めのファルルとして復活した第37話の放送日（カムバックライブ記念日）"
+    description: "ファルル目覚めの日"
 
   - name:        "緑風ふわり"
     birthday:    "8/11"
@@ -77,11 +81,11 @@ characters:
 
   - name:        "ジュリィ"
     birthday:    "7/10"
-    description: "プリパラ筐体の稼働開始日"
+    description: "初めてプリチケが届いた日（プリパラ筐体の稼働開始日）"
 
   - name:        "ジャニス"
     birthday:    "7/10"
-    description: "双子ということで女神ジュリィと同じ誕生日"
+    description: "初めてプリチケが届いた日（プリパラ筐体の稼働開始日）"
 
   - name:        "じゅのん"
     birthday:    "1/23"
@@ -99,11 +103,11 @@ characters:
 
   - name:        "虹色にの"
     birthday:    "3/14"
-    description: "円周率の日"
+    description: "円周率の日、数学の日"
 
   - name:        "幸多みちる"
     birthday:    "7/13"
-    description: "オカルト記念日"
+    description: "オカルトの日"
 
   - name:        "華園しゅうか"
     birthday:    "10/17"
@@ -123,7 +127,7 @@ characters:
 
   - name:        "三鷹アサヒ"
     birthday:    "1/1"
-    description: "元日"
+    description: "初日の日"
 
   - name:        "高瀬コヨイ"
     birthday:    "12/24"
@@ -135,13 +139,16 @@ characters:
 
   - name:        "地獄ミミ子"
     birthday:    "1/16"
+    description: "閻魔の日"
 
   # アイドルランドプリパラ
   - name:        "香田澄あまり"
     birthday:    "2/29"
+    description: "うるう日"
 
   - name:        "ウシミツ"
     birthday:    "2/22"
+    description: "忍者の日"
 
   - name:        "大江戸シンヤ"
     birthday:    "9/9"
@@ -149,7 +156,13 @@ characters:
 
   - name:        "マリオ"
     birthday:    "2/29"
+    description: "うるう日"
 
   - name:        "ポォロロ"
     birthday:    "7/3"
     description: "涙の日"
+
+  # 大プリパラ展
+  - name:        "らぁるる"
+    birthday:    "5/5"
+    description: "未来の日"
