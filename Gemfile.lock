@@ -3,9 +3,11 @@ GEM
   specs:
     diff-lcs (1.5.1)
     hashie (5.0.0)
-    icalendar (2.10.2)
+    icalendar (2.10.3)
       ice_cube (~> 0.16)
+      ostruct
     ice_cube (0.17.0)
+    ostruct (0.6.0)
     rake (13.2.1)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
