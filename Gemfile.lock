@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sue445/icalendar
-  revision: 57949f826d9134aea8e6717fb39602868e41452b
+  revision: d42170b393c24a1174418397662431ed5e927bce
   branch: ruby_3.4
   specs:
     icalendar (2.10.3)
