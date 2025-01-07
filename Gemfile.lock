@@ -1,13 +1,23 @@
+GIT
+  remote: https://github.com/sue445/icalendar
+  revision: 57949f826d9134aea8e6717fb39602868e41452b
+  branch: ruby_3.4
+  specs:
+    icalendar (2.10.3)
+      base64
+      ice_cube (~> 0.16)
+      logger
+      ostruct
+
 GEM
   remote: https://rubygems.org/
   specs:
+    base64 (0.2.0)
     diff-lcs (1.5.1)
     hashie (5.0.0)
-    icalendar (2.10.3)
-      ice_cube (~> 0.16)
-      ostruct
     ice_cube (0.17.0)
-    ostruct (0.6.0)
+    logger (1.6.4)
+    ostruct (0.6.1)
     rake (13.2.1)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -30,7 +40,7 @@ PLATFORMS
 
 DEPENDENCIES
   hashie
-  icalendar
+  icalendar!
   rake
   rspec
   rspec-temp_dir
