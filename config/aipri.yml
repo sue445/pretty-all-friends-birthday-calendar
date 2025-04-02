@@ -1,28 +1,28 @@
 title: "ひみつのアイプリ"
 characters:
-  - name:        "青空ひまり"
-    birthday:    "8/18"
+  - name:     "青空ひまり"
+    birthday: "8/18"
 
-  - name:        "星川みつき"
-    birthday:    "9/12"
+  - name:     "星川みつき"
+    birthday: "9/12"
 
-  - name:        "鈴風つむぎ"
-    birthday:    "12/25"
+  - name:     "鈴風つむぎ"
+    birthday: "12/25"
 
-  - name:        "一条寺サクラ"
-    birthday:    "3/25"
+  - name:     "一条寺サクラ"
+    birthday: "3/25"
 
-  - name:        "二階堂タマキ"
-    birthday:    "2/2"
+  - name:     "二階堂タマキ"
+    birthday: "2/2"
 
-  - name:        "四之宮リンリン"
-    birthday:    "9/27"
+  - name:     "四之宮リンリン"
+    birthday: "9/27"
 
-  - name:        "三ツ葉アイリ"
-    birthday:    "10/31"
+  - name:     "三ツ葉アイリ"
+    birthday: "10/31"
 
-  - name:        "真実夜チィ"
-    birthday:    "11/24"
+  - name:     "真実夜チィ"
+    birthday: "11/24"
 
   # リング編
   - name:     "五十嵐じゅりあ"

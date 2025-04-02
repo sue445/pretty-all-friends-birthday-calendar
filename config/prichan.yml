@@ -29,20 +29,20 @@ characters:
     birthday:    "11/11"
     description: "宝石の日"
 
-  - name:        "七星あいら"
-    birthday:    "9/3"
+  - name:     "七星あいら"
+    birthday: "9/3"
 
-  - name:        "マリー"
-    birthday:    "7/4"
+  - name:     "マリー"
+    birthday: "7/4"
 
-  - name:        "ミズリー"
-    birthday:    "12/12"
+  - name:     "ミズリー"
+    birthday: "12/12"
 
-  - name:        "クオ"
-    birthday:    "9/23"
+  - name:     "クオ"
+    birthday: "9/23"
 
-  - name:        "バディス"
-    birthday:    "3/23"
+  - name:     "バディス"
+    birthday: "3/23"
 
   # シーズン2
   - name:        "金森まりあ"
@@ -57,12 +57,12 @@ characters:
     birthday:    "4/22"
     description: "ダイヤモンド原石の日"
 
-  - name:        "幸瀬なる"
-    birthday:    "3/3"
+  - name:     "幸瀬なる"
+    birthday: "3/3"
 
   # シーズン3
-  - name:        "メルパン"
-    birthday:    "8/8"
+  - name:     "メルパン"
+    birthday: "8/8"
 
   - name:        "キラッCHU"
     birthday:    "10/10"
@@ -70,6 +70,7 @@ characters:
 
   - name:        "輝アリス"
     birthday:    "11/5"
+    description: "いいたまごの日"
 
   - name:        "輝イブ"
     birthday:    "11/5"

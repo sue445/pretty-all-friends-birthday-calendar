@@ -1,20 +1,20 @@
 title: "プリティーリズム"
 characters:
   # オーロラドリーム
-  - name:        "春音あいら"
-    birthday:    "9/3"
+  - name:     "春音あいら"
+    birthday: "9/3"
 
-  - name:        "天宮りずむ"
-    birthday:    "9/3"
+  - name:     "天宮りずむ"
+    birthday: "9/3"
 
-  - name:        "高峰みおん"
-    birthday:    "3/3"
+  - name:     "高峰みおん"
+    birthday: "3/3"
 
-  - name:        "藤堂かのん"
-    birthday:    "11/3"
+  - name:     "藤堂かのん"
+    birthday: "11/3"
 
-  - name:        "城之内セレナ"
-    birthday:    "7/6"
+  - name:     "城之内セレナ"
+    birthday: "7/6"
 
   # ディアマイフューチャー
   - name:        "上葉みあ"
@@ -34,20 +34,20 @@ characters:
     description: "ファイトの日"
 
   # レインボーライブ
-  - name:        "彩瀬なる"
-    birthday:    "3/3"
+  - name:     "彩瀬なる"
+    birthday: "3/3"
 
-  - name:        "福原あん"
-    birthday:    "4/2"
+  - name:     "福原あん"
+    birthday: "4/2"
 
-  - name:        "涼野いと"
-    birthday:    "2/14"
+  - name:     "涼野いと"
+    birthday: "2/14"
 
-  - name:        "蓮城寺べる"
-    birthday:    "11/11"
+  - name:     "蓮城寺べる"
+    birthday: "11/11"
 
-  - name:        "小鳥遊おとは"
-    birthday:    "9/15"
+  - name:     "小鳥遊おとは"
+    birthday: "9/15"
 
-  - name:        "森園わかな"
-    birthday:    "6/5"
+  - name:     "森園わかな"
+    birthday: "6/5"
