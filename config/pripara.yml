@@ -87,14 +87,14 @@ characters:
     birthday:    "7/10"
     description: "初めてプリチケが届いた日（プリパラ筐体の稼働開始日）"
 
-  - name:        "じゅのん"
-    birthday:    "1/23"
+  - name:     "じゅのん"
+    birthday: "1/23"
 
-  - name:        "ぴのん"
-    birthday:    "2/13"
+  - name:     "ぴのん"
+    birthday: "2/13"
 
-  - name:        "かのん"
-    birthday:    "3/21"
+  - name:     "かのん"
+    birthday: "3/21"
 
   # アイドルタイムプリパラ
   - name:        "夢川ゆい"
