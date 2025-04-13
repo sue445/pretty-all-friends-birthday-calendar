@@ -4,7 +4,7 @@ GEM
     base64 (0.2.0)
     diff-lcs (1.5.1)
     hashie (5.0.0)
-    icalendar (2.10.3)
+    icalendar (2.11.0)
       base64
       ice_cube (~> 0.16)
       logger
