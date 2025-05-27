@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.2.0)
-    diff-lcs (1.5.1)
+    diff-lcs (1.6.2)
     hashie (5.0.0)
     icalendar (2.11.0)
       base64
@@ -13,19 +13,19 @@ GEM
     logger (1.7.0)
     ostruct (0.6.1)
     rake (13.2.1)
-    rspec (3.13.0)
+    rspec (3.13.1)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.0)
+    rspec-core (3.13.4)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.0)
+    rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.0)
+    rspec-mocks (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-support (3.13.0)
+    rspec-support (3.13.4)
     rspec-temp_dir (1.1.1)
       rspec (>= 3.0)
 
