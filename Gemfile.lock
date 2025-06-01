@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    base64 (0.2.0)
+    base64 (0.3.0)
     diff-lcs (1.6.2)
     hashie (5.0.0)
     icalendar (2.11.0)
