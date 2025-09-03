@@ -1,11 +1,13 @@
 title: "プリティーリズム"
 characters:
   # オーロラドリーム
-  - name:     "春音あいら"
-    birthday: "9/3"
+  - name:        "春音あいら"
+    birthday:    "9/3"
+    description: "スケート座の女神星が輝いた日" # c.f. https://x.com/prismstone_ts/status/1963044270358614140
 
-  - name:     "天宮りずむ"
-    birthday: "9/3"
+  - name:        "天宮りずむ"
+    birthday:    "9/3"
+    description: "スケート座の女神星が輝いた日" # c.f. https://x.com/prismstone_ts/status/1963044270358614140
 
   - name:     "高峰みおん"
     birthday: "3/3"
