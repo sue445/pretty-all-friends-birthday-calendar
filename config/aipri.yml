@@ -1,5 +1,6 @@
-title: "ひみつのアイプリ"
+title: "アイプリ"
 characters:
+  # ひみつのアイプリ
   - name:     "青空ひまり"
     birthday: "8/18"
 
@@ -39,3 +40,10 @@ characters:
 
   - name:     "八王子ビビ"
     birthday: "8/31"
+
+  # おねがいアイプリ
+  - name:     "好実いのり"
+    birthday: "6/14"
+
+  - name:     "夢宮あおい"
+    birthday: "10/6"
