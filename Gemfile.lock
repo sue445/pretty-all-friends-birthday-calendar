@@ -34,10 +34,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  base64
   hashie
-  icalendar
-  logger
+  icalendar (>= 2.11.0)
   rake
   rspec
   rspec-temp_dir
