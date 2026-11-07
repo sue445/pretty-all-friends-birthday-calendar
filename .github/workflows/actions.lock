@@ -4,3 +4,4 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/dependabot-manager.yml': []
+    '.github/workflows/verify-actions-lockfile.yml': []
